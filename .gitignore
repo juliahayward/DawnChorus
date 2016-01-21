@@ -1,0 +1,6 @@
+DawnChorusService/bin/
+DawnChorusService/obj/
+DawnChorusService/packages/
+DCServiceTest/bin/
+DCServiceTest/obj/x86/Debug/DCServiceTest.csproj.App.config
+DCServiceTest/obj/

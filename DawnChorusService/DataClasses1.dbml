@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="web" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=81.131.253.161;Initial Catalog=web;User ID=sa" SettingsObjectName="DawnChorusService.Properties.Settings" SettingsPropertyName="webConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AccessCount" Member="AccessCounts">
+    <Type Name="AccessCount">
+      <Column Name="Site" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nSessions" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCCafeMailingList" Member="CCCafeMailingLists">
+    <Type Name="CCCafeMailingList">
+      <Column Name="Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VerifyCode" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JuliaHaywardMailingList" Member="JuliaHaywardMailingLists">
+    <Type Name="JuliaHaywardMailingList">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VerifyCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SnabusMailingList" Member="SnabusMailingLists">
+    <Type Name="SnabusMailingList">
+      <Column Name="Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VerifyCode" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
