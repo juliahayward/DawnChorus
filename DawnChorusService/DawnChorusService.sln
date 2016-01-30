@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawnChorusService", "DawnCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCServiceTest", "..\DCServiceTest\DCServiceTest.csproj", "{95A54A57-D0D0-4CD8-B6A6-3E4BDD0C73DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtils", "..\..\Lib\WebUtils\WebUtils.csproj", "{79DE840B-ACEC-4BCC-A1C6-800885B6A165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtils", "..\..\..\julia\Lib\WebUtils\WebUtils.csproj", "{79DE840B-ACEC-4BCC-A1C6-800885B6A165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
