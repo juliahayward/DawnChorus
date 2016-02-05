@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><Database Name="web" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=**REDACTEDOldPhswebDbIp**;Initial Catalog=web;User ID=sa" SettingsObjectName="WebUtils.Properties.Settings" SettingsPropertyName="webConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AccessCount" Member="AccessCounts">
+    <Type Name="AccessCount">
+      <Column Name="Site" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nSessions" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SiteId" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCCafeMailingList" Member="CCCafeMailingListMembers">
+    <Type Name="CCCafeMailingListMember">
+      <Column Name="Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VerifyCode" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JuliaHaywardMailingList" Member="JuliaHaywardMailingListMembers">
+    <Type Name="JuliaHaywardMailingListMember">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VerifyCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Website" Member="Websites">
+    <Type Name="Website">
+      <Column Name="SiteId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteUrl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TwitterId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TwitterOauthToken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TwitterAccessToken" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SingleTweet" Member="SingleTweets">
+    <Type Name="SingleTweet">
+      <Column Name="SingleTweetId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(140) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeToTweet" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RetweetingSiteIds" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecurringTweet" Member="RecurringTweets">
+    <Type Name="RecurringTweet">
+      <Column Name="RecurringTweetId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(140) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeToTweet" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodInDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PeriodInMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayOfMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeToStopTweeting" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RetweetingSiteIds" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SnabusMailingList" Member="SnabusMailingListMembers">
+    <Type Name="SnabusMailingListMember">
+      <Column Name="Name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VerifyCode" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
