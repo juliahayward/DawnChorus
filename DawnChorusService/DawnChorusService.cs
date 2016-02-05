@@ -7,6 +7,7 @@ using System.ServiceModel.Description;
 using System.ServiceProcess;
 using LinqToTwitter;
 using WebUtils;
+using DawnChorusService.Plugins;
 
 namespace DawnChorusService
 {
@@ -14,6 +15,7 @@ namespace DawnChorusService
     {
         private ServiceHost selfHost;
         private Timer timer;
+        private readonly RatingsScraperPlugin plugin = new RatingsScraperPlugin();
 
         /// <summary>
         /// Public Constructor for WindowsService.
@@ -59,6 +61,8 @@ namespace DawnChorusService
         protected override void OnStart(string[] args)
         {
             base.OnStart(args);
+            plugin.Start();
+
             timer = new Timer();
             timer.Interval = 5 * 60 * 1000;
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
@@ -119,6 +123,8 @@ namespace DawnChorusService
         protected override void OnStop()
         {
             base.OnStop();
+
+            plugin.Stop();
 
             // Close the ServiceHostBase to shutdown the WCF service.
             selfHost.Close();

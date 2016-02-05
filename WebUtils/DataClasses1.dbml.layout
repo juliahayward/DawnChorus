@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="95fe08e7-832c-4c88-b200-7e27909f8999" absoluteBounds="2.625, 0.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/AccessCount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38fc06d1-3384-4b0d-8755-fe238fa72a3a" absoluteBounds="2.64, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6a2b5c0-3d33-46a8-a4f7-f56d3cad392a" absoluteBounds="2.625, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/CCCafeMailingListMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1d5d3aa-d66f-4184-97ae-ce18a24fadb2" absoluteBounds="2.64, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33c39fd9-32de-47cf-a658-03d515ab50d4" absoluteBounds="4.875, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/JuliaHaywardMailingListMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce82fcc5-4e0e-40e4-8df1-3abb910bdfee" absoluteBounds="4.89, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5e811fd-0fc5-48ba-a67e-999585b58de6" absoluteBounds="0.75, 5.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClasses1DataContext/Website" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19c5ebe1-dea5-4bff-9d9d-f82f9d041db0" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="303703c2-d017-4fac-85b3-cd51429de9a7" absoluteBounds="0.5, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/SingleTweet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c250d0ba-777f-492d-b369-1f26e0475ce3" absoluteBounds="0.51500000000000012, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72669e25-7593-4a74-86f7-9f982d6018cc" absoluteBounds="0.5, 2.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DataClasses1DataContext/RecurringTweet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79dad149-e6a4-4042-8d47-292748db772c" absoluteBounds="0.51500000000000012, 3.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="319da2ab-aa5d-44d3-9f1b-74a97290e3ad" absoluteBounds="4.875, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses1DataContext/SnabusMailingListMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e817c31-2d71-4720-8e5b-b0dc5c70861d" absoluteBounds="4.89, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

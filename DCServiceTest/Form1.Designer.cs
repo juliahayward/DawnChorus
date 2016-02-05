@@ -1,4 +1,4 @@
-﻿namespace DCServiceTest
+namespace DCServiceTest
 {
     partial class Form1
     {

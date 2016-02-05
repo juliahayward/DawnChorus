@@ -4,3 +4,9 @@ DawnChorusService/packages/
 DCServiceTest/bin/
 DCServiceTest/obj/x86/Debug/DCServiceTest.csproj.App.config
 DCServiceTest/obj/
+DawnChorusService/TestResults/DawnChorusService.TE.Tests.mdf
+DawnChorusService/TestResults/DawnChorusService.TE.Tests_log.ldf
+DawnChorusServiceTests/bin/
+DawnChorusServiceTests/obj/
+WebUtils/bin/
+WebUtils/obj/

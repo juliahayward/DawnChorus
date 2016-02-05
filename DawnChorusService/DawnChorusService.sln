@@ -5,7 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawnChorusService", "DawnCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCServiceTest", "..\DCServiceTest\DCServiceTest.csproj", "{95A54A57-D0D0-4CD8-B6A6-3E4BDD0C73DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtils", "..\..\..\julia\Lib\WebUtils\WebUtils.csproj", "{79DE840B-ACEC-4BCC-A1C6-800885B6A165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUtils", "..\WebUtils\WebUtils.csproj", "{79DE840B-ACEC-4BCC-A1C6-800885B6A165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawnChorusServiceTests", "..\DawnChorusServiceTests\DawnChorusServiceTests.csproj", "{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,16 @@ Global
 		{79DE840B-ACEC-4BCC-A1C6-800885B6A165}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{79DE840B-ACEC-4BCC-A1C6-800885B6A165}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{79DE840B-ACEC-4BCC-A1C6-800885B6A165}.Release|x86.ActiveCfg = Release|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{280F705B-1DF1-4FEC-B1FE-8EDB9870FFAA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
