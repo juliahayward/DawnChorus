@@ -67,7 +67,9 @@
     </Compile>
     <Compile Include="IMailingList.cs" />
     <Compile Include="ISiteCounters.cs" />
+    <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\RatingsScraperPlugin.cs" />
+    <Compile Include="Plugins\TweetSchedulerPlugin.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

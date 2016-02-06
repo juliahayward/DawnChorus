@@ -9,7 +9,7 @@ using WebUtils;
 
 namespace DawnChorusService.Plugins
 {
-    public class RatingsScraperPlugin
+    public class RatingsScraperPlugin : IPlugin
     {
         private Timer timer;
 

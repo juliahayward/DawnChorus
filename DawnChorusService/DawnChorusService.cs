@@ -8,14 +8,16 @@ using System.ServiceProcess;
 using LinqToTwitter;
 using WebUtils;
 using DawnChorusService.Plugins;
+using System.Collections.Generic;
 
 namespace DawnChorusService
 {
     class DawnChorusService : ServiceBase
     {
         private ServiceHost selfHost;
-        private Timer timer;
-        private readonly RatingsScraperPlugin plugin = new RatingsScraperPlugin();
+        private IEnumerable<IPlugin> plugins = new IPlugin[]
+            { new ScheduledTweetSenderPlugin(), new RatingsScraperPlugin() };
+
 
         /// <summary>
         /// Public Constructor for WindowsService.
@@ -61,12 +63,19 @@ namespace DawnChorusService
         protected override void OnStart(string[] args)
         {
             base.OnStart(args);
-            plugin.Start();
-
-            timer = new Timer();
-            timer.Interval = 5 * 60 * 1000;
-            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
-            timer.Enabled = true;
+            foreach (var plugin in plugins)
+            {
+                try
+                {
+                    plugin.Start();
+                    Log("Started " + plugin.GetType().Name, EventLogEntryType.Information);
+                }
+                catch (Exception e)
+                {
+                    Log("Failed to start " + plugin.GetType().Name
+                        + Environment.NewLine + e.Message, EventLogEntryType.Error);
+                }
+            }
 
             Uri baseAddress = new Uri("http://localhost:8000/WebsiteManager/Service"); // localhost to debug
 
@@ -89,22 +98,7 @@ namespace DawnChorusService
             }
         }
 
-        void timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            try
-            {
-                var ConsumerKey = ConfigurationManager.AppSettings["twitterConsumerKey"];
-                var ConsumerSecret = ConfigurationManager.AppSettings["twitterConsumerSecret"];
-                var tweets = TwitterUtils.ProcessSingleTweets(ConsumerKey, ConsumerSecret);
-                Log("Tweeted " + tweets + " singletons at " + DateTime.Now.ToShortTimeString(), EventLogEntryType.Information);
-                tweets = TwitterUtils.ProcessRecurringTweets(ConsumerKey, ConsumerSecret);
-                Log("Tweeted " + tweets + " recurring at " + DateTime.Now.ToShortTimeString(), EventLogEntryType.Information);
-            }
-            catch (Exception ex)
-            {
-                Log(ex.Message, EventLogEntryType.Error);
-            }
-        }
+       
 
         private void Log(string text, EventLogEntryType type)
         {
@@ -124,8 +118,10 @@ namespace DawnChorusService
         {
             base.OnStop();
 
-            plugin.Stop();
-
+            foreach (var plugin in plugins)
+            {
+                plugin.Stop();
+            }
             // Close the ServiceHostBase to shutdown the WCF service.
             selfHost.Close();
         }
