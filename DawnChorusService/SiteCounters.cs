@@ -273,7 +273,8 @@ namespace DawnChorusService
 
         public int ScheduleSingleTweet(int siteId, string status, string retweetingSiteIds, DateTime timeToTweet)
         {
-            TwitterUtils.ScheduleSingleTweet(siteId, status, retweetingSiteIds, timeToTweet);
+            var twitterUtils = new TwitterUtils();
+            twitterUtils.ScheduleSingleTweet(siteId, status, retweetingSiteIds, timeToTweet);
             return 0;
         }
     }

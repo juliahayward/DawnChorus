@@ -16,7 +16,7 @@ namespace DawnChorusService
     {
         private ServiceHost selfHost;
         private IEnumerable<IPlugin> plugins = new IPlugin[]
-            { new ScheduledTweetSenderPlugin(), new RatingsScraperPlugin() };
+            { new ScheduledTweetSenderPlugin(), new RatingsScraperPlugin(new TwitterUtils()) };
 
 
         /// <summary>

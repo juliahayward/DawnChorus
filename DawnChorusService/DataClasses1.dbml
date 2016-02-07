@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><Database Name="web" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=**REDACTEDOldPhswebDbIp**;Initial Catalog=web;User ID=sa" SettingsObjectName="DawnChorusService.Properties.Settings" SettingsPropertyName="webConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=127.0.0.1;Initial Catalog=web;User ID=sa" SettingsObjectName="DawnChorusService.Properties.Settings" SettingsPropertyName="webConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AccessCount" Member="AccessCounts">
     <Type Name="AccessCount">
       <Column Name="Site" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -28,6 +28,14 @@
       <Column Name="Email" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="VerifyCode" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="" Member="AllTimeHighRatings">
+    <Type Name="AllTimeHighRating">
+      <Column Name="Id" AutoSync="Never" Type="System.Int32" DbType="int" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlayerName" Type="System.String" DbType="nvarchar(255)" CanBeNull="false" />
+      <Column Name="PlayerId" Type="System.Int32" DbType="INT" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Single" DbType="float" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

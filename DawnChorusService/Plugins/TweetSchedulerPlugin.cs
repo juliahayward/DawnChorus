@@ -32,11 +32,12 @@ namespace DawnChorusService.Plugins
         {
             try
             {
+                var twitterUtils = new TwitterUtils();
                 var ConsumerKey = ConfigurationManager.AppSettings["twitterConsumerKey"];
                 var ConsumerSecret = ConfigurationManager.AppSettings["twitterConsumerSecret"];
-                var tweets = TwitterUtils.ProcessSingleTweets(ConsumerKey, ConsumerSecret);
+                var tweets = twitterUtils.ProcessSingleTweets(ConsumerKey, ConsumerSecret);
                 Log("Tweeted " + tweets + " singletons at " + DateTime.Now.ToShortTimeString(), EventLogEntryType.Information);
-                tweets = TwitterUtils.ProcessRecurringTweets(ConsumerKey, ConsumerSecret);
+                tweets = twitterUtils.ProcessRecurringTweets(ConsumerKey, ConsumerSecret);
                 Log("Tweeted " + tweets + " recurring at " + DateTime.Now.ToShortTimeString(), EventLogEntryType.Information);
             }
             catch (Exception ex)

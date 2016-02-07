@@ -6,9 +6,18 @@ using LinqToTwitter;
 
 namespace WebUtils
 {
-    public class TwitterUtils
+    public interface ITwitterUtils
     {
-        public static int GetNumberOfMentions(TwitterContext twitterCtx)
+        int GetNumberOfMentions(TwitterContext twitterCtx);
+        int ProcessSingleTweets(string ConsumerKey, string ConsumerSecret);
+        int ProcessRecurringTweets(string ConsumerKey, string ConsumerSecret);
+        void ScheduleSingleTweet(int siteId, string status, string retweetingSiteIds,
+            DateTime timeToTweet);
+    }
+
+    public class TwitterUtils : ITwitterUtils
+    {
+        public int GetNumberOfMentions(TwitterContext twitterCtx)
         {
             var myMentions =
                 from mention in twitterCtx.Status
@@ -22,7 +31,7 @@ namespace WebUtils
             return myMentions.Count();
         }
 
-        public static int ProcessSingleTweets(string ConsumerKey, string ConsumerSecret)
+        public int ProcessSingleTweets(string ConsumerKey, string ConsumerSecret)
         {
             DataClasses1DataContext context = new DataClasses1DataContext();
 
@@ -50,7 +59,7 @@ namespace WebUtils
                     var tweetStatus = task.Result;
                     tweetId = tweetStatus.StatusID;
                 }
-                if (tweet.RetweetingSiteIds != null)
+                if (!string.IsNullOrEmpty(tweet.RetweetingSiteIds))
                 {
                     foreach (var retweetingSiteId in tweet.RetweetingSiteIds.Split(','))
                     {
@@ -81,7 +90,7 @@ namespace WebUtils
             return tweetsProcessed;
         }
 
-        public static int ProcessRecurringTweets(string ConsumerKey, string ConsumerSecret)
+        public int ProcessRecurringTweets(string ConsumerKey, string ConsumerSecret)
         {
             DataClasses1DataContext context = new DataClasses1DataContext();
 
@@ -155,7 +164,7 @@ namespace WebUtils
             return tweetsProcessed;
         }
 
-        public static void ScheduleSingleTweet(int siteId, string status, string retweetingSiteIds,
+        public void ScheduleSingleTweet(int siteId, string status, string retweetingSiteIds,
             DateTime timeToTweet)
         {
             DataClasses1DataContext context = new DataClasses1DataContext();
