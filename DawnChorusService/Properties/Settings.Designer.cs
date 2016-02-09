@@ -26,7 +26,7 @@ namespace DawnChorusService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=127.0.0.1;Initial Catalog=web;User ID=sa;Password=**REDACTEDAwsDbPwd*" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=**REDACTEDAwsDbIp**;Initial Catalog=web;User ID=sa;Password=**REDACTEDAwsDbPwd*" +
             "*")]
         public string webConnectionString {
             get {
